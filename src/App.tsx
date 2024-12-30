@@ -37,6 +37,11 @@ function App() {
     }
   }, [setError]);
 
+  // Define the handleReply function
+  const handleReply = (messageId, replyText) => {
+    sendMessage(replyText, messageId); // Assuming `sendMessage` supports sending a reply with a parent ID
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 flex">
       <div className="flex-grow max-w-4xl mx-auto bg-white shadow-lg flex flex-col">
